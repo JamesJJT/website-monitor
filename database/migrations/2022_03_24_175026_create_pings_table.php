@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('applications', function (Blueprint $table) {
+        Schema::create('pings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('url');
-            $table->string('owner');
-            $table->string('github_url')->nullable();
-            $table->string('documentation_url')->nullable();
-            $table->timestamp('ping_monitor')->default(null)->nullable();
+            $table->foreignId('application_id')->constrained();
+            $table->integer('ping')->nullable();
+            $table->timestamp('error')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applications');
+        Schema::dropIfExists('pings');
     }
 };

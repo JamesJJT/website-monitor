@@ -19,4 +19,9 @@ class Application extends Model
     {
         return $this->hasOne(SSL::class);
     }
+
+    public function ping()
+    {
+        return $this->hasMany(Ping::class);
+    }
 }
