@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('url');
+            $table->string('owner');
+            $table->string('github_url')->nullable();
+            $table->string('documentation_url')->nullable();
             $table->timestamps();
         });
     }

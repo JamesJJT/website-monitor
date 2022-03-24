@@ -9,7 +9,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
-    <body class="h-full antialiased">
+    <body class="h-full antialiased bg-gray-100">
         <div>
             <!-- Static sidebar for desktop -->
             <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">

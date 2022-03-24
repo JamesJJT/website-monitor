@@ -10,7 +10,7 @@ class Application extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'url'
+        'name', 'url', 'owner', 'github_url', 'documentation_url'
     ];
 
     protected $with = ['ssl'];

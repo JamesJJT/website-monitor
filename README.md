@@ -1,7 +1,8 @@
 # Website Monitor
 
 ## Todo
-- [ ] Add github link to application
-- [ ] Add documentation link to applicaiton
+- [X] Add github link to application
+- [X] Add documentation link to applicaiton
 - [ ] Refactor SSL getter
-- [ ] Add page to display individual application
+- [X] Add page to display individual application
+- [ ] Refresh SSL data button on application.show

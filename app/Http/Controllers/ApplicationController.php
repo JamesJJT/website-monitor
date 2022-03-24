@@ -11,6 +11,11 @@ use Illuminate\Support\Arr;
 
 class ApplicationController extends Controller
 {
+    public function show(Application $application)
+    {
+        return view('application.show')->with(['application' => $application]);
+    }
+
     public function store(CreateApplicationRequest $request)
     {
         $application = Application::create(Arr::except($request->toArray(), ['_token']));

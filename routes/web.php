@@ -12,4 +12,5 @@ Route::get('/test', function () {
 });
 
 Route::get('/application/create', [ApplicationController::class, 'create'])->name('application.create');
+Route::get('/application/{application}', [ApplicationController::class, 'show'])->name('application.show');
 Route::post('/application', [ApplicationController::class, 'store'])->name('application.store');

@@ -24,8 +24,11 @@ class CreateApplicationRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'string',
-            'url' => 'string'
+            'name' => 'string|required',
+            'url' => 'string|required',
+            'owner' => 'string|required',
+            'github_url' => 'string',
+            'documentation_url' => 'string'
         ];
     }
 }
